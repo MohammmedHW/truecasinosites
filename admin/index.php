@@ -23,7 +23,7 @@ if (file_exists($define_file)) {
 }
 
 // Check if user is logged in
-if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true) {
+if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] == '') {
     header('Location: login.php'); // redirect to login page
     exit();
 }

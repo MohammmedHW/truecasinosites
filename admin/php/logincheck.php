@@ -4,6 +4,11 @@ include(realpath(dirname(dirname(__FILE__))).'/function/config.inc.php');
 
 extract($_POST);
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ../login.php');
+    exit;
+}
+
 if(((isset($username)) && ($username!='')) && ((isset($password)) && ($password!='')))
 {
 

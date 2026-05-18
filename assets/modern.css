@@ -700,3 +700,168 @@ img { max-width: 100%; display: block; }
   .mod-footer-grid { grid-template-columns: 1fr; }
   .mod-footer-bottom-inner { flex-direction: column; }
 }
+
+/* =========================================
+   THEME TOGGLE LAYOUT & STYLING
+   ========================================= */
+.mod-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mod-theme-toggle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mod-theme-toggle:hover {
+  background: var(--gold-glow);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: rotate(20deg) scale(1.08);
+  box-shadow: 0 6px 16px var(--gold-glow);
+}
+
+.mod-theme-toggle .icon-light { display: none; }
+.mod-theme-toggle .icon-dark { display: block; }
+
+:root[data-theme="light"] .mod-theme-toggle .icon-light { display: block; color: var(--gold); }
+:root[data-theme="light"] .mod-theme-toggle .icon-dark { display: none; }
+
+/* =========================================
+   LIGHT THEME OVERRIDES (PREMIUM SLATE EDITION)
+   ========================================= */
+:root[data-theme="light"] {
+  /* Colors & Theme variables overrides */
+  --bg-primary:    #f4f6f9; /* Soft, premium slate-gray background */
+  --bg-secondary:  #ffffff; /* Crisp white headers/menus */
+  --bg-card:       #ffffff; /* Crisp white casino cards */
+  --bg-card-hover: #ffffff;
+  --text-primary:  #0f172a; /* Slate 900 for ultra-premium readability */
+  --text-muted:    #475569; /* Slate 600 for subtext */
+  --border:        rgba(15, 23, 42, 0.06); /* Thin slate borders */
+  --border-hover:  rgba(240, 192, 64, 0.5); /* Gold outline on hover */
+  --shadow:        0 10px 30px rgba(15, 23, 42, 0.04); /* Elegant, soft shadow */
+  --gold-glow:     rgba(240, 192, 64, 0.15);
+  
+  /* game.php local css overrides */
+  --nx-bg:         #f4f6f9;
+  --nx-card:       #ffffff;
+  --nx-card2:      #f8fafc;
+  --nx-border:     rgba(15, 23, 42, 0.06);
+  --nx-text:       #0f172a;
+  --nx-muted:      #475569;
+}
+
+/* Light Theme Layout & Typography Overrides */
+:root[data-theme="light"] body {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(240, 192, 64, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(232, 67, 147, 0.02) 0%, transparent 50%);
+}
+
+/* Header overlays */
+:root[data-theme="light"] .mod-header {
+  background: rgba(255, 255, 255, 0.92);
+}
+:root[data-theme="light"] .mod-header.scrolled {
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.04);
+}
+:root[data-theme="light"] .mod-theme-toggle {
+  background: rgba(15, 23, 42, 0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Hero elements styling */
+:root[data-theme="light"] .mod-hero {
+  background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 60%, #fae8ff 100%);
+}
+:root[data-theme="light"] .mod-hero h1 {
+  background: linear-gradient(135deg, #0f172a 30%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+:root[data-theme="light"] .mod-badge {
+  background: rgba(15, 23, 42, 0.03);
+}
+
+/* Page content elements styling */
+:root[data-theme="light"] .mod-page-content h1 {
+  background: linear-gradient(135deg, #0f172a 40%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Newsletter styling */
+:root[data-theme="light"] .mod-newsletter {
+  background: linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%);
+}
+:root[data-theme="light"] .mod-newsletter h3 {
+  color: var(--text-primary);
+}
+
+/* Card hover shadows and borders */
+:root[data-theme="light"] .mod-casino-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+:root[data-theme="light"] .mod-casino-card:hover {
+  box-shadow: 0 12px 30px rgba(240, 192, 64, 0.15);
+  border-color: var(--gold);
+}
+
+/* game.php Review page structural overrides */
+:root[data-theme="light"] .nx-hero-card {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.04);
+}
+:root[data-theme="light"] .nx-logo-box {
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+:root[data-theme="light"] .nx-similar-logo {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+:root[data-theme="light"] .nx-bonus-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+:root[data-theme="light"] .nx-bonus-amount {
+  background: linear-gradient(135deg, #0f172a, var(--nx-gold-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root[data-theme="light"] .nx-content-text {
+  color: var(--text-primary);
+}
+:root[data-theme="light"] .nx-list li,
+:root[data-theme="light"] .nx-info-item,
+:root[data-theme="light"] .nx-feature-item {
+  border-bottom-color: rgba(15, 23, 42, 0.06);
+}
+:root[data-theme="light"] .nx-bonus-code {
+  background: #f1f5f9;
+}
+:root[data-theme="light"] .nx-sidebar-card h3 {
+  color: var(--text-primary);
+}
+:root[data-theme="light"] .nx-similar-header h2 {
+  color: var(--text-primary);
+}

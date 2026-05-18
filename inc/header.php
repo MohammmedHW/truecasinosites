@@ -9,6 +9,14 @@ while ($settings = mysqli_fetch_array($res_setting)) {
 <!doctype html>
 <html lang="en">
 <head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,5 +38,5 @@ while ($settings = mysqli_fetch_array($res_setting)) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Modern CSS -->
-    <link rel="stylesheet" href="assets/modern.css">
+    <link rel="stylesheet" href="assets/modern.css?v=1.2">
 </head>
