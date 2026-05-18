@@ -175,6 +175,11 @@ your copyrighted material outside their relationship with you.
 Conveying under any other circumstances is permitted solely under
 the conditions stated below.  Sublicensing is not allowed; section 10
 makes it unnecessary. */ ?><?php
+// $hostname="localhost";
+// $user_name="toprnxpr_casino";
+// $password="@Mhw9669454554";
+// $dbname="toprnxpr_casino";
+// $con =mysqli_connect($hostname,$user_name,$password,$dbname);
 $hostname="localhost";
 $user_name="root";
 $password="";
