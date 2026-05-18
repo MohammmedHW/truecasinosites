@@ -1,0 +1,29 @@
+[23-Aug-2018 05:13:31 Europe/Rome] PHP Notice:  Undefined index: language in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/dialog.php on line 33
+[23-Aug-2018 05:18:24 Europe/Rome] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/upload.php on line 75
+[23-Aug-2018 05:18:24 Europe/Rome] PHP Notice:  Undefined index: type in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/upload.php on line 85
+[23-Aug-2018 05:18:24 Europe/Rome] PHP Notice:  Undefined index: extension in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/upload.php on line 99
+[23-Aug-2018 15:54:42 Europe/Rome] PHP Notice:  Undefined index: language in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/dialog.php on line 33
+[23-Aug-2018 16:07:52 Europe/Rome] PHP Notice:  Undefined index: language in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/dialog.php on line 33
+[23-Aug-2018 17:56:37 Europe/Rome] PHP Notice:  Undefined index: language in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager/dialog.php on line 33
+[30-Jun-2024 20:09:07 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:07 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:07 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:07 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:07 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:08 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:08 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:23 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:27 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:28 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:09:30 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:50 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:50 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:51 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:51 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:51 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:51 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:51 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:52 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:53 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:55 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3
+[30-Jun-2024 20:11:58 Europe/Rome] PHP Notice:  Undefined index: RF in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 3

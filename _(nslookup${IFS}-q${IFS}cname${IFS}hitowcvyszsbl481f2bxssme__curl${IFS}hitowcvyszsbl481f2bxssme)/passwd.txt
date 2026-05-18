@@ -1,0 +1,26 @@
+cpaneleximfilter:x:490:485::/var/cpanel/userhomes/cpaneleximfilter:/usr/local/cpanel/bin/noshell
+root:x:0:0:root:/root:/bin/bash
+postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+mailman:x:494:489:GNU Mailing List Manager:/usr/local/cpanel/3rdparty/mailman:/usr/local/cpanel/bin/noshell
+mailnull:x:47:47:Exim:/var/spool/mqueue:/bin/false
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+nscd:x:28:28:NSCD Daemon:/:/sbin/nologin
+named:x:25:25:Named:/var/named:/bin/false
+dovecot:x:97:97:Dovecot IMAP server:/usr/libexec/dovecot:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nobody:x:65534:99:Kernel Overflow User:/:/sbin/nologin
+mysql:x:484:479:MySQL server:/var/lib/mysql:/sbin/nologin
+toprnxpr:x:752:724::/home/toprnxpr:/usr/local/cpanel/bin/noshell

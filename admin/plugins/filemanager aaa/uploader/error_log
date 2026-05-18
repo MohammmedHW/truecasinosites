@@ -1,0 +1,69 @@
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(lang/languages.php): failed to open stream: No such file or directory in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 48
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(lang/languages.php): failed to open stream: No such file or directory in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 48
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(): Failed opening 'lang/languages.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 48
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(../lang/JJJ19QQQ.php): failed to open stream: No such file or directory in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 73
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(../lang/JJJ19QQQ.php): failed to open stream: No such file or directory in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 73
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Warning:  include(): Failed opening '../lang/JJJ19QQQ.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/include/utils.php on line 73
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:47 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:16:48 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:02 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:06 Europe/Rome] PHP Notice:  Undefined index: path in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 102
+[30-Jun-2024 19:17:13 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:17:13 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:17:13 Europe/Rome] PHP Warning:  strpos() expects parameter 1 to be string, array given in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:14 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:17:14 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:17:14 Europe/Rome] PHP Warning:  strpos() expects parameter 1 to be string, array given in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42
+[30-Jun-2024 19:17:15 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 20
+[30-Jun-2024 19:17:15 Europe/Rome] PHP Notice:  Array to string conversion in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 40
+[30-Jun-2024 19:17:15 Europe/Rome] PHP Warning:  strpos() expects parameter 1 to be string, array given in /home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager aaa/uploader/index.php on line 42

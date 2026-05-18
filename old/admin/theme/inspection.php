@@ -1,0 +1,197 @@
+ <!-- BEGIN PAGE CONTAINER-->
+  <div class="page-content">
+    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+    <div id="portlet-config" class="modal hide">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button"></button>
+        <h3>Widget Settings</h3>
+      </div>
+      <div class="modal-body"> Widget settings form goes here </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="content">
+<ul class="breadcrumb">
+        <li>
+          <p>YOU ARE HERE</p>
+        </li>
+        <li><a href="#" class="active">inspection Details come here</a> </li>
+      </ul>
+      <div class="page-title"> <i class="icon-custom-left"></i>
+        <h3>Form - <span class="semi-bold">Add inspection ()</span></h3>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="grid simple">
+            <div class="grid-title no-border">
+              <h4>inspection की <span class="semi-bold">जानकारी यहां भरे !! </span></h4>
+              <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+            </div>
+            <div class="grid-body no-border">
+			<form class="form-no-horizontal-spacing validation" id="myform" action="php/inspection.php" method="post" role="form">	
+              <div class="row column-seperation">
+                <div class="col-md-6">
+                  <h4>Basic Information</h4>            
+                    <div class="row form-row">
+                      <div class="col-md-6">
+                         <p>inspection Title</p>
+                        <input value="<?php echo $inspection['name_ins']; ?>" name="name_ins" id="form3FirstName" type="text"  class="form-control required" placeholder=" " > 
+                      </div>
+                      <div class="col-md-6">
+                        <p>Select Organized Staff</p>
+                       
+
+                         <select  name="staff_id"  style="width:100%"  class="select2 form-control">
+                           
+                            <?php
+                           foreach ($staffs as $key => $staff) {
+                              $checked = '';
+                              if ($staff['sid'] == $inspection['staff_id']){
+                                $checked = 'selected="selected"';
+                              }
+
+                              echo ' <option '.$checked.' value="'.$staff['sid'].'">'.$staff['name'].'</option>';
+                           }
+                           ?>
+                          </select>
+                     
+                      </div>
+                    </div>
+                    <div class="row form-row">
+                      
+                      <div class="col-md-12">
+                         <p>date</p>
+                        <input type="text" placeholder=" " class="form-control" id="form3DateOfBirth" name="date" value="<?php echo $inspection['date']; ?>">
+                      </div>
+                    </div>
+                  
+                   
+                    <div class="row form-row">
+                      <div class="col-md-6">
+                        <p>Select Organized Farmer</p>
+                       
+
+                         <select  name="farmer_id"  style="width:100%"  class="select2 form-control">
+                           
+                            <?php
+                           foreach ($farmers as $key => $farmer) {
+                              $checked = '';
+                              if ($farmer['fid'] == $inspection['farmer_id']){
+                                $checked = 'selected="selected"';
+                              }
+
+                              echo ' <option '.$checked.' value="'.$farmer['fid'].'">'.$farmer['name'].'</option>';
+                           }
+                           ?>
+                          </select>
+                     
+                      </div>
+
+                      <div class="col-md-6">
+                        <p>Select Organized Season</p>
+                       
+
+                         <select  name="season_id"  style="width:100%"  class="select2 form-control">
+                           
+                            <?php
+                           foreach ($seasons as $key => $season) {
+                              $checked = '';
+                              if ($season['seasonid'] == $inspection['season_id']){
+                                $checked = 'selected="selected"';
+                              }
+
+                              echo ' <option '.$checked.' value="'.$season['seasonid'].'">'.$season['seasonid'].'</option>';
+                           }
+                           ?>
+                          </select>
+                     
+                      </div>
+                    </div>
+
+
+
+                    <div class="row form-row">
+                      <div class="col-md-12">
+                        <p> Status</p>
+                        <select name="status" id="form3Gender" class="select2 form-control"  >
+                          <option <?php if($inspection['status']=='1'){ echo 'selected="selected"';} ?> value="1">Active</option>
+                          <option  <?php if($inspection['status']=='2'){ echo 'selected="selected"';} ?> value="2">In-Active</option>
+                        </select>
+                      </div>
+
+                      
+                      
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-6">
+        
+                  <h4>More Information</h4>
+
+                    <div class="row form-row">
+                      
+                      <div class="col-md-6">
+                        <p>Points</p>
+                      
+                      <textarea name="points" class="form-control"><?php echo $inspection['points']; ?></textarea>
+                      </div>
+
+                      <div class="col-md-6">
+                        <p>Inspection Type</p>
+                        <select name="type" id="form3Gender" class="select2 form-control"  >
+                          <option <?php if($inspection['type']=='internal'){ echo 'selected="selected"';} ?> value="internal">Internal</option>
+                          <option  <?php if($inspection['type']=='external'){ echo 'selected="selected"';} ?> value="external">External</option>
+                        </select>
+                      </div>
+
+                     
+                    </div>
+
+                    <div class="row form-row">
+                      
+                      <div class="col-md-12">
+                        <p>Remarks</p>
+                      
+                      <textarea name="remarks" class="form-control"><?php echo $inspection['remarks']; ?></textarea>
+                      </div>
+
+                   
+
+                     
+                    </div>
+
+                </div>
+              </div>
+				<div class="form-actions">
+					<!-- <div class="pull-left">
+					  <div class="checkbox checkbox check-success 	">
+						<input type="checkbox" value="1" id="chkTerms">
+						<label for="chkTerms">I Here by agree on the Term and condition. </label>
+					  </div>
+					</div> -->
+					<?php
+					if(isset($_GET['id']) && ($_GET['id']>0)){
+						echo '<input type="hidden" name="inspection_id" value="'.$_GET['id'].'">';
+					}
+					?>
+					<input type="hidden" name="submit" value="inspection_add">
+					<div class="pull-right">
+					
+					  <input type="submit" name="save" value="Submit" class="btn btn-danger btn-cons">
+					  <button class="btn btn-white btn-cons" type="button">Cancel</button>
+					</div>
+				  </div>
+			</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END PAGE -->
+<!-- END CONTAINER -->
+<!-- BEGIN CORE JS FRAMEWORK

@@ -1,0 +1,3 @@
+
+User-Agent: *
+Sitemap: http://popularcasinosites.com/sitemap.xml
