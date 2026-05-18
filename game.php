@@ -133,7 +133,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
                     <div class="nx-section-card">
                         <h2>Overview</h2>
                         <div class="nx-content-text">
-                            <?php echo nl2br(htmlspecialchars($network['description'])); ?>
+                            <?php echo parse_bbcode(nl2br(htmlspecialchars($network['description'] ?? ''))); ?>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
                     <div class="nx-section-card">
                         <h2>Software & Game Providers</h2>
                         <div class="nx-content-text">
-                            <?php echo nl2br(htmlspecialchars($network['software'] ?? 'Information coming soon.')); ?>
+                            <?php echo parse_bbcode(nl2br(htmlspecialchars($network['software'] ?? 'Information coming soon.'))); ?>
                         </div>
                     </div>
 
@@ -167,7 +167,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
                     <div class="nx-section-card">
                         <h2>Games Selection</h2>
                         <div class="nx-content-text">
-                            <?php echo nl2br(htmlspecialchars($network['games'] ?? 'Not specified')); ?>
+                            <?php echo parse_bbcode(nl2br(htmlspecialchars($network['games'] ?? 'Not specified'))); ?>
                         </div>
                     </div>
 
@@ -210,7 +210,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
                     <div class="nx-section-card">
                         <h2>Device Compatibility</h2>
                         <div class="nx-content-text">
-                            <?php echo nl2br(htmlspecialchars($network['device'] ?? 'Desktop, Tablet & Mobile')); ?>
+                            <?php echo parse_bbcode(nl2br(htmlspecialchars($network['device'] ?? 'Desktop, Tablet & Mobile'))); ?>
                         </div>
                     </div>
 
@@ -218,7 +218,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
                     <div class="nx-section-card">
                         <h2>Final Verdict</h2>
                         <div class="nx-content-text">
-                            <?php echo nl2br(htmlspecialchars($offer['review'] ?? 'No review available yet.')); ?>
+                            <?php echo parse_bbcode(nl2br(htmlspecialchars($offer['review'] ?? 'No review available yet.'))); ?>
                         </div>
                     </div>
                 </div>

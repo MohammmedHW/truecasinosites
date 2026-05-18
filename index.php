@@ -30,7 +30,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
     <!-- ===== STATIC PAGE CONTENT ===== -->
     <div class="mod-page-content">
         <h1><?php echo htmlspecialchars($page['name'] ?? ''); ?></h1>
-        <?php echo $page['content']; ?>
+        <?php echo parse_bbcode($page['content'] ?? ''); ?>
     </div>
 
 <?php elseif ($category): ?>
@@ -55,7 +55,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
         <div class="mod-page-content">
             <div class="mod-collapsible-wrapper">
                 <div class="mod-collapsible-content" id="topDescContent">
-                    <?php echo $page['top_desc']; ?>
+                    <?php echo parse_bbcode($page['top_desc'] ?? ''); ?>
                 </div>
                 <button class="mod-read-more-btn" id="topDescToggle">Read more</button>
             </div>
@@ -298,7 +298,7 @@ include(realpath(dirname(__FILE__)) . '/inc/menu.php');
         <!-- Footer description -->
         <?php if (!empty($page['foot_desc'])): ?>
             <div class="mod-page-content" style="margin-top:40px;">
-                <?php echo $page['foot_desc']; ?>
+                <?php echo parse_bbcode($page['foot_desc'] ?? ''); ?>
             </div>
         <?php endif; ?>
 
