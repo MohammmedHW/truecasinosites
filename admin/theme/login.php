@@ -14,7 +14,7 @@
 <div class="col-md-6 auth-panel auth-form-wrap">
  
   <h2>Sign in</h2>
-  <p class="auth-copy">Use your staff email and password to open the admin dashboard.</p>
+  <p  style="color: #000;" class="auth-copy">Use your staff email and password to open the admin dashboard.</p>
 
   <div class="auth-alert"><?php echo $msg; ?></div>
 
