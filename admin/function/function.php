@@ -130,4 +130,41 @@ if (!function_exists('random_number')) {
         return $result;
     }
 }
+
+if (!function_exists('get_status')) {
+    function get_status($status) {
+        $status = (string) $status;
+
+        if ($status === '1' || strtolower($status) === 'active') {
+            return '<span class="label label-success">Active</span>';
+        }
+
+        if ($status === '2' || strtolower($status) === 'inactive') {
+            return '<span class="label label-important">Inactive</span>';
+        }
+
+        return '<span class="label">Unknown</span>';
+    }
+}
+
+if (!function_exists('date_search')) {
+    function date_search($search, $column) {
+        $search = trim((string) $search);
+        $column = preg_replace('/[^a-zA-Z0-9_]/', '', (string) $column);
+
+        if ($search === '' || $column === '') {
+            return "1 = 1";
+        }
+
+        $timestamp = strtotime($search);
+        if ($timestamp === false) {
+            return "`$column` LIKE '%" . addslashes($search) . "%'";
+        }
+
+        $start = strtotime(date('Y-m-d 00:00:00', $timestamp));
+        $end = strtotime(date('Y-m-d 23:59:59', $timestamp));
+
+        return "(`$column` >= '$start' AND `$column` <= '$end')";
+    }
+}
 ?>

@@ -1,72 +1,56 @@
-<?php echo $msg; ?>
-          <div class="col-md-5 col-md-offset-1">
-          <h2>Sign in to webarch</h2>
-          <p>Use Facebook, Twitter or your email to sign in.<br>
-            <a href="#">Sign up Now!</a> for a webarch account,It's free and always will be..</p>
-          <br>
-
-       <button class="btn btn-block btn-info col-md-8" type="button">
-            <span class="pull-left"><i class="icon-facebook"></i></span>
-            <span class="bold">Login with Facebook</span> </button>
-       <button class="btn btn-block btn-success col-md-8" type="button">
-            <span class="pull-left"><i class="icon-twitter"></i></span>
-            <span class="bold">Login with Twitter</span>
-        </button>
-        </div>
-        <div class="col-md-5 "> <br>
-               
-
-        <form id="login-form" class="login-form custom_validation " action="php/logincheck.php" method="post">
-             <div class="row">
-             <div class="form-group col-md-10">
-                    <label class="form-label">Username</label>
-                    <div class="controls">
-                <div class="input-with-icon  right">                                       
-                  <i class=""></i>
-                  <input type="text" name="username" id="username" class="form-control required email">
-                           
-                </div>
-                    </div>
-                  </div>
-                  </div>
-              <div class="row">
-                  <div class="form-group col-md-10">
-                    <label class="form-label">Password</label>
-                    <span class="help"></span>
-                    <div class="controls">
-                <div class="input-with-icon  right">                                       
-                  <i class=""></i>
-                  <input type="password" name="password" id="password" class="form-control required">
-                  
-                </div>
-                    </div>
-                  </div>
-                  </div>
-              <div class="row">
-                  <div class="control-group  col-md-10">
-                    <div class="checkbox checkbox check-success"> <a href="#modal" data-toggle="modal">Trouble login in?</a>&nbsp;&nbsp;
-                      <input type="checkbox" id="checkbox1" value="1">
-                      <label for="checkbox1">Keep me reminded </label>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-10">
-                      <button class="btn btn-primary btn-cons pull-right" type="submit" name="login" id="login" value="User Login">Login</button>
-                    </div>
-                  </div>
-              </form>
-
-             </div>
-     
-    
-  </div>
+<div class="col-md-6 auth-panel auth-hero">
+  <span class="auth-kicker">Casino Admin</span>
+  <h1>Control your casino offers with a simpler admin experience.</h1>
+  <p>Review offers faster, manage categories with less friction, and keep the content team focused on updates instead of fighting the panel.</p>
+  <ul class="auth-feature-list">
+    <li class="auth-feature">Cleaner login flow for staff access.</li>
+    <li class="auth-feature">Faster navigation into offers, pages, and networks.</li>
+    <li class="auth-feature">Improved stability for the data lists that drive the admin tables.</li>
+  </ul>
 </div>
-<!-- END CONTAINER -->
 
-<!-- BEGIN CORE JS FRAMEWORK-->
-<!-- BEGIN CORE TEMPLATE JS -->
+<div class="col-md-6 auth-panel auth-form-wrap">
+  <img src="Images/logo.png" data-src="Images/logo.png" data-src-retina="Images/logo.png" class="img-responsive auth-logo" alt="Admin logo">
+  <h2>Sign in</h2>
+  <p class="auth-copy">Use your staff email and password to open the admin dashboard.</p>
 
+  <div class="auth-alert"><?php echo $msg; ?></div>
+
+  <form id="login-form" class="login-form custom_validation validation auth-form" action="php/logincheck.php" method="post">
+    <div class="form-group">
+      <label class="form-label" for="username">Email Address</label>
+      <div class="controls">
+        <div class="input-with-icon right">
+          <input type="text" name="username" id="username" class="form-control required email" placeholder="admin@example.com">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="password">Password</label>
+      <div class="controls">
+        <div class="input-with-icon right">
+          <input type="password" name="password" id="password" class="form-control required" placeholder="Enter your password">
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-actions">
+      <div class="auth-check">
+        <input type="checkbox" id="checkbox1" value="1">
+        <label for="checkbox1">Keep me signed in on this device</label>
+      </div>
+      <button class="auth-btn" type="submit" name="login" id="login" value="User Login">Open Dashboard</button>
+    </div>
+
+    <div class="auth-links">
+      <a href="#modal" data-toggle="modal">Forgot password?</a>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -116,12 +100,13 @@
           if(data[0] == 1){
             $("#modal").modal("hide");
             window.location = "login.php";
+          } else if (data[1]) {
+            alert(data[1]);
           }
         })
         .fail(function(data)
-        { alert("Email Id Does Not Exist")})
+        { alert("Unable to process your request right now.")})
     });
 
   });
 </script>
-</html>

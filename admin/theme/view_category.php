@@ -12,19 +12,19 @@
     <div class="content">
       <ul class="breadcrumb">
         <li>
-          <p>YOU ARE HERE</p>
+          <p>Category Management</p>
         </li>
-        <li><a href="#" class="active">Offers</a> </li>
+        <li><a href="#" class="active">Categories</a> </li>
       </ul>
       <div class="page-title"> <i class="icon-custom-left"></i>
-        <h3>Offers  <span class="semi-bold"></span></h3>
+        <h3>Categories <span class="semi-bold">Overview</span></h3>
       </div>
 
       <div class="row-fluid">
         <div class="span12">
           <div class="grid simple ">
             <div class="grid-title">
-              <h4>Advance <span class="semi-bold">Network</span></h4>
+              <h4>All <span class="semi-bold">Categories</span></h4>
               <div class="tools"> <a href="javascript:;" class="collapse"></a> <a href="#grid-config" data-toggle="modal" class="config"></a> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
             </div>
             <div class="grid-body ">

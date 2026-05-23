@@ -6,7 +6,8 @@
 <title><?php echo $app_vars['company_name']; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="Jay prakash tracking system" name="description" />
-<meta content="Mono Infotecg" name="author" />
+<meta content="Mono Infotech" name="author" />
+
 <!-- BEGIN PLUGIN CSS -->
 <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -18,6 +19,7 @@
 <link href="assets/plugins/boostrap-checkbox/css/bootstrap-checkbox.css" rel="stylesheet" type="text/css" media="screen"/>
 <link rel="stylesheet" href="assets/plugins/ios-switch/ios7-switch.css" type="text/css" media="screen">
 <!-- END PLUGIN CSS -->
+
 <!-- BEGIN CORE CSS FRAMEWORK -->
 <link href="assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/plugins/boostrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
@@ -25,167 +27,239 @@
 <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
 <!-- END CORE CSS FRAMEWORK -->
+
 <!-- BEGIN CSS TEMPLATE -->
 <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
 <!-- END CSS TEMPLATE -->
-<!-- <script src="assets/js/custom.php"></script> -->
 
+<style>
+  :root {
+    --nav-bg: #0f172a;
+    --nav-border: #1e293b;
+    --text-white: #ffffff;
+    --text-dim: #94a3b8;
+    --primary-indigo: #6366f1;
+    --primary-indigo-hover: #4f46e5;
+    --danger-red: #f43f5e;
+    --danger-red-hover: #e11d48;
+    --radius-sm: 8px;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body.admin-panel-modern {
+    font-family: var(--font-stack);
+    margin: 0;
+    padding-top: 75px; /* Offset to prevent content overlap beneath the sticky header */
+  }
+
+  /* Global Fixed Header Structure */
+  .header.navbar-modern {
+    background-color: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--nav-border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .navbar-inner-modern {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  /* Brand Identification Section */
+  .header-seperation-modern {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 200px;
+  }
+
+  .header-seperation-modern .logo {
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+  }
+
+  .header-seperation-modern .logo:hover {
+    opacity: 0.9;
+  }
+
+  /* Core Meta Navigation Content Areas */
+  .quick-nav-modern {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 32px;
+  }
+
+  .adm-top-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .adm-top-kicker {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary-indigo);
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+
+  .adm-top-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1px;
+  }
+
+  .adm-top-subtitle {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.4;
+    max-width: 550px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Navigation Controller Buttons */
+  .adm-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .adm-top-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--text-white);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .adm-top-chip:hover {
+    background-color: var(--primary-indigo);
+    border-color: var(--primary-indigo-hover);
+    color: var(--text-white) !important;
+    transform: translateY(-1px);
+  }
+
+  .adm-top-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dim);
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+  }
+
+  .adm-top-link:hover {
+    color: var(--danger-red) !important;
+  }
+
+  /* Responsive Screen Breakpoint Management */
+  @media (max-width: 991px) {
+    .adm-top-subtitle {
+      display: none; /* Strip back layout density on medium displays */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .quick-nav-modern {
+      margin-left: 16px;
+    }
+    .adm-top-kicker, 
+    .adm-top-title {
+      font-size: 15px;
+    }
+    .adm-top-kicker {
+      font-size: 9px;
+    }
+    .adm-top-chip span {
+      display: none; /* Hide button text descriptions on mobile viewports */
+    }
+    .adm-top-chip {
+      padding: 8px;
+    }
+  }
+</style>
 </head>
 
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
-<body class="">
-<!-- BEGIN HEADER -->
-<div class="header navbar navbar-inverse "> 
-  <!-- BEGIN TOP NAVIGATION BAR -->
-  <div class="navbar-inner">
-  <div class="header-seperation"> 
-    <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">  
-     <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>     
-    </ul>
-      <!-- BEGIN LOGO --> 
-      <a href="index.php"><img src="Images/jay_logo.png" class="logo" alt=""  data-src="Images/jay_logo.png" data-src-retina="assets/img/logo2x.png" width="160" height="50"/></a>
-      <!-- END LOGO --> 
-      <ul class="nav pull-right notifcation-center">  
-        <li class="dropdown" id="header_task_bar"> <a href="index.php" class="dropdown-toggle active" data-toggle=""> <div class="iconset top-home"></div> </a> </li>
-       <!--  <li class="dropdown" id="header_inbox_bar" > <a href="email.html" class="dropdown-toggle" > <div class="iconset top-messages"></div>  <span class="badge" id="msgs-badge">2</span> </a></li> -->
-    <li class="dropdown" id="portrait-chat-toggler" style="display:none"> <a href="#sidr" class="chat-menu-toggle"> <div class="iconset top-chat-white "></div> </a> </li>        
-      </ul>
-      </div>
-      <!-- END RESPONSIVE MENU TOGGLER --> 
-      <div class="header-quick-nav" > 
-      <!-- BEGIN TOP NAVIGATION MENU -->
-    <div class="pull-left"> 
-        <ul class="nav quick-section">
-          <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" >
-            <div class="iconset top-menu-toggle-dark"></div>
-            </a> </li>
-        </ul>
-        <ul class="nav quick-section">
-          <li class="quicklinks"> <a href="#" class="" >
-            <div class="iconset top-reload"></div>
-            </a> </li>
-          <li class="quicklinks"> <span class="h-seperate"></span></li>
-          <li class="quicklinks"> <a href="#" class="" >
-            <div class="iconset top-tiles"></div>
-            </a> </li>
-      <li class="m-r-10 input-prepend inside search-form no-boarder">
-        <span class="add-on"> <span class="iconset top-search"></span></span>
-         <input name="" type="text"  class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
-      </li>
-      </ul>
-    </div>
-   <!-- END TOP NAVIGATION MENU -->
-   <!-- BEGIN CHAT TOGGLER -->
-      <div class="pull-right"> 
-    <div class="chat-toggler">  
-        <!-- <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom"  data-content='' data-toggle="dropdown" data-original-title="Notifications">
-          <div class="user-details"> 
-            <div class="username">
-              <span class="badge badge-important">3</span> 
-              John <span class="bold">Smith</span>                  
-            </div>            
-          </div> 
-          <div class="iconset top-down-arrow"></div>
-        </a> -->  
-        <!-- <div id="notification-list" style="display:none">
-          <div style="width:300px">
-              <div class="notification-messages info">
-                  <div class="user-profile">
-                    <img src="assets/img/profiles/d.jpg"  alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
-                  </div>
-                  <div class="message-wrapper">
-                    <div class="heading">
-                      David Nester - Commented on your wall
-                    </div>
-                    <div class="description">
-                      Meeting postponed to tomorrow
-                    </div>
-                    <div class="date pull-left">
-                    A min ago
-                    </div>                    
-                  </div>
-                  <div class="clearfix"></div>                  
-                </div>  
-              <div class="notification-messages danger">
-                <div class="iconholder">
-                  <i class="icon-warning-sign"></i>
-                </div>
-                <div class="message-wrapper">
-                  <div class="heading">
-                    Server load limited
-                  </div>
-                  <div class="description">
-                    Database server has reached its daily capicity
-                  </div>
-                  <div class="date pull-left">
-                  2 mins ago
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>  
-              <div class="notification-messages success">
-                <div class="user-profile">
-                  <img src="assets/img/profiles/h.jpg"  alt="" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35">
-                </div>
-                <div class="message-wrapper">
-                  <div class="heading">
-                    You haveve got 150 messages
-                  </div>
-                  <div class="description">
-                    150 newly unread messages in your inbox
-                  </div>
-                  <div class="date pull-left">
-                  An hour ago
-                  </div>                  
-                </div>
-                <div class="clearfix"></div>
-              </div>              
-            </div>        
-        </div> -->
-        <div class="profile-pic"> 
-          <img src="assets/img/profiles/avatar_small.jpg"  alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="35" height="35" /> 
-        </div>            
-      </div>
-     <ul class="nav quick-section ">
-      <li class="quicklinks"> 
-        <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">            
-          <div class="iconset top-settings-dark "></div>  
-        </a>
-        <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
-                  <li><a href="profile.php"> My Account</a>
-                  </li>
-                  <!-- <li><a href="calender.html">My Calendar</a>
-                  </li> -->
-                 <!--  <li><a href="email.html"> My Inbox&nbsp;&nbsp;<span class="badge badge-important animated bounceIn">2</span></a>
-                  </li> -->
-                  <li class="divider"></li>                
-                  <li><a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
-               </ul>
-      </li> 
-      <li class="quicklinks"> <span class="h-seperate"></span></li> 
-      <li class="quicklinks">   
-      <a id="chat-menu-toggle" href="#sidr" class="chat-menu-toggle" ><div class="iconset top-chat-dark "><span class="badge badge-important hide" id="chat-message-count">1</span></div>
-      </a> 
-        <div class="simple-chat-popup chat-menu-toggle hide" >
-          <div class="simple-chat-popup-arrow"></div><div class="simple-chat-popup-inner">
-             <div style="width:100px">
-             <div class="semi-bold">David Nester</div>
-             <div class="message">Hey you there </div>
-            </div>
-          </div>
-        </div>
-      </li> 
-    </ul>
-      </div>
-     <!-- END CHAT TOGGLER -->
-      </div> 
-      <!-- END TOP NAVIGATION MENU --> 
-   
-  </div>
-  <!-- END TOP NAVIGATION BAR --> 
-</div>
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+$pageTitleMap = array(
+  'index.php' => 'Dashboard',
+  'offers.php' => 'Manage Offers',
+  'view_offers.php' => 'Casino Offers',
+  'network.php' => 'Manage Networks',
+  'view_network.php' => 'Networks',
+  'category.php' => 'Manage Categories',
+  'view_category.php' => 'Categories',
+  'pages.php' => 'Manage Pages',
+  'view_pages.php' => 'Pages',
+  'staff.php' => 'Manage Staff',
+  'view_staff.php' => 'Staff',
+  'profile.php' => 'Profile',
+  'settings.php' => 'Settings',
+);
+$currentPageTitle = isset($pageTitleMap[$currentPage]) ? $pageTitleMap[$currentPage] : (!empty($menu_title) ? $menu_title : 'Admin Panel');
+?>
 
-<!-- END HEADER --> 
+<body class="admin-panel-modern">
+
+<!-- BEGIN FIXED HEADER -->
+<div class="header navbar-modern"> 
+  <div class="navbar-inner-modern">
+    
+    <!-- BRAND AND CORPORATE IDENTITY DISPLAY AREA -->
+    
+    
+    <!-- METADATA DATA STREAM & WORKSPACE MANIFEST SELECTION -->
+    <div class="quick-nav-modern"> 
+      <div class="adm-top-meta">
+        <div class="adm-top-kicker">Admin Workspace</div>
+        <div class="adm-top-title"><?php echo htmlspecialchars($currentPageTitle); ?></div>
+      
+      </div>
+      
+      <!-- INTERACTION CONTROLLER UTILITIES -->
+      <div class="adm-top-actions">
+        <a class="adm-top-chip" href="index.php">
+          <i class="fa fa-home"></i> <span>Dashboard</span>
+        </a>
+        <a class="adm-top-link" href="logout.php">
+          <i class="fa fa-power-off"></i> <span>Log Out</span>
+        </a>
+      </div>
+    </div> 
+    
+  </div>
+</div>
+<!-- END FIXED HEADER -->

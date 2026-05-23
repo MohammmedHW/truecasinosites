@@ -1,8 +1,9 @@
 <?php
 include(realpath(dirname(dirname(__FILE__))).'/function/config.inc.php'); 
 
-
-extract($_POST);
+$username = $_POST['username'] ?? '';
+$password = $_POST['password'] ?? '';
+$forget_pass = $_POST['forget_pass'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: ../login.php');
@@ -21,7 +22,7 @@ if(((isset($username)) && ($username!='')) && ((isset($password)) && ($password!
     if($user['total_rows']=='0'){
 
         $_SESSION['msg_type'] = "error";
-        $_SESSION['msg'] = 'UserName and Password have error.';
+        $_SESSION['msg'] = 'Invalid email or password.';
         $goto = '../login.php';
         echo '<script type="text/javascript">window.location.href="'.$goto.'"</script>';
 
@@ -58,30 +59,30 @@ if(((isset($username)) && ($username!='')) && ((isset($password)) && ($password!
 }
 if((isset($forget_pass)) && ($forget_pass != ""))
 {
-    $where  = array('email'=> $_REQUEST['email']);
+    $email = trim($_REQUEST['email'] ?? '');
+    $where  = array('email'=> $email);
     $users = select("staff", $where ,'', "", "","ASC" ,0, 1);
     $user  = $users[0];
-    $forgot_pass = array();
+    $forgot_pass = array(0, '');
     if($user['total_rows']=='0'){
 
         $_SESSION['msg'] = 'Email Id Does Not Exist';
         $_SESSION['msg_type'] = 'warning';
-        $forgot_pass[0] = 1;
+        $forgot_pass[1] = 'Email address was not found.';
         
 
     }else{
 
-        $forgot_pass = random_number("7");
+        $generated_password = random_number("7");
         $data = array(
-        'email'     =>     $_POST["email"],
-        'forgot_pass'     =>    md5($forgot_pass),
-        'sid'     =>     $user['id'],
+        'id'     =>     $user['id'],
+        'forgot_pass'     =>    md5($generated_password),
         );
 
         $currentURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
         $currentURL .= $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
 
-        $insert = insert("user", $data,"1");
+        $insert = insert("staff", $data,"1");
 
         $subject = "New Password ".$app_vars['company_name'];
         $content = '<p><span style="font-size: 14pt;"><strong>New Password Link Verify,&nbsp;</strong></span></p>
@@ -90,9 +91,9 @@ if((isset($forget_pass)) && ($forget_pass != ""))
         <pre style="font-size: 9pt;"><span style="color: #ff0000;"><tt><span style="color: #ff0000;"><tt>*********</tt></span> Verify with following link, to generate new password *********</tt></span></pre>
         <p>&nbsp;</p>
 
-        <p>Please open following link  <a href="'.$currentURL.'/newpassword.php?forgot=verify&id='.$user['id'].'&code='.$forgot_pass.'">Click Here</a> </p>
+        <p>Please open following link  <a href="'.$currentURL.'/newpassword.php?forgot=verify&id='.$user['id'].'&code='.$generated_password.'">Click Here</a> </p>
         <p>&nbsp;</p>
-        <p>or Copy and paste this link to browser :- '.$currentURL.'/newpassword.php?forgot=verify&id='.$user['id'].'&code='.$forgot_pass.'</p>
+        <p>or Copy and paste this link to browser :- '.$currentURL.'/newpassword.php?forgot=verify&id='.$user['id'].'&code='.$generated_password.'</p>
         <p>&nbsp;</p>
         <p>Thanks,</p>';
 
@@ -118,6 +119,7 @@ if((isset($forget_pass)) && ($forget_pass != ""))
             $_SESSION['msg_type'] = 'success';
             activity_employee($user['id'],'activity_forgot_password','activity_pass_rec_mail_sent #'.$user['id'],'success');
             $forgot_pass[0] = 1;
+            $forgot_pass[1] = 'Password reset email sent.';
 
         }
         else {
@@ -126,7 +128,7 @@ if((isset($forget_pass)) && ($forget_pass != ""))
             $_SESSION['msg'] = "Sorry....!! Unable To Update Password. Please Try After Some Time";
             $_SESSION['msg_type'] = "error";
             activity_employee($user['id'],'activity_forgot_password','activity_unable_to_send_email #'.$user['id'],'error');
-            $forgot_pass[0] = 1;
+            $forgot_pass[1] = 'Unable to start password reset.';
 
         }
 

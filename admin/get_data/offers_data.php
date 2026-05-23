@@ -123,13 +123,13 @@ include_once(dirname(realpath(dirname(__FILE__))).'/function/config.inc.php');
 		$sOrder
 		$sLimit
 		";
-	$rResult = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error() );
+	$rResult = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error($con) );
 	
 	/* Data set length after filtering */
 	$sQuery = "
 		SELECT FOUND_ROWS()
 	";
-	$rResultFilterTotal = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error() );
+	$rResultFilterTotal = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error($con) );
 	$aResultFilterTotal = mysqli_fetch_array($rResultFilterTotal);
 	$iFilteredTotal = $aResultFilterTotal[0];
 	
@@ -138,7 +138,7 @@ include_once(dirname(realpath(dirname(__FILE__))).'/function/config.inc.php');
 		SELECT COUNT(`".$sIndexColumn."`)
 		FROM   $sTable
 	";
-	$rResultTotal = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error() );
+	$rResultTotal = mysqli_query($con, $sQuery ) or fatal_error( 'MySQL Error: ' . mysqli_error($con) );
 	$aResultTotal = mysqli_fetch_array($rResultTotal);
 	$iTotal = $aResultTotal[0];
 	
@@ -161,7 +161,7 @@ include_once(dirname(realpath(dirname(__FILE__))).'/function/config.inc.php');
 		$row = array();
 		$row[] = $i;  
 		$row[] = $aRow['title'];       		
-		$row[] = $catRow['name'];  // $aRow['category'];
+		$row[] = !empty($catRow['name']) ? $catRow['name'] : 'Unassigned';
 		$row[] = $aRow['bonus_amount'];
 		$row[] = $aRow['rating'];
 		$row[] = $aRow['ranking'];

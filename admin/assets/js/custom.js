@@ -172,14 +172,9 @@ $(document).ready(function() {
     })
 
     $('.datatable').each(function(){
-    var sour = $(this).attr('id');
-    if(sour != '')
-    {
-        var source = $('#'+sour).attr('summary');
-    }
-    else
-    {
-        var source = $('.datatable').attr('summary');
+    var source = $(this).attr('summary');
+    if(!source){
+        return true;
     }
 
     oTable =  $(this).dataTable({
@@ -215,7 +210,8 @@ $(document).ready(function() {
                       {
                          'bSortable': false,   aTargets: [ 0,-1 ]
                       }
-                    ]
+                    ],
+                    "aaSorting": [[1, "asc"]]
             });
         });
 

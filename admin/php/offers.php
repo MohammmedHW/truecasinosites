@@ -49,7 +49,7 @@ if((isset($_REQUEST['submit'])) && ($_REQUEST['submit']=='offer_add')){
     if($insert) {
 
         $_SESSION['msg_type'] = 'Success';
-        $_SESSION['msg'] = "Offer Updated Successfully";
+        $_SESSION['msg'] = isset($_POST['id']) ? "Offer updated successfully" : "Offer added successfully";
 
         $goto = '../view_offers.php'; 
        
@@ -70,14 +70,14 @@ if((isset($_REQUEST['submit'])) && ($_REQUEST['submit']=='offer_add')){
 
 if((isset($_REQUEST['action'])) && ($_REQUEST['action']=='del')){
     $where  = "id = '".$_GET['id']."'";
-    $farmers = select("offer", $where ,'', "", "","ASC");
+    $farmers = select("offers", $where ,'', "", "","ASC");
 
     $farmer = $farmers[0];
 
     if($farmer['total_rows'] == '0'){
 
         $_SESSION['msg_type'] = 'Error';
-        $_SESSION['msg'] = "Offer Id not found";
+        $_SESSION['msg'] = "Offer ID not found";
         $goto = '../view_offers.php'; 
         echo '<script type="text/javascript">window.location.href="'.$goto.'"</script>';
         exit; 
@@ -85,7 +85,7 @@ if((isset($_REQUEST['action'])) && ($_REQUEST['action']=='del')){
     }else{
 
         $_SESSION['msg_type'] = 'Success';
-        $_SESSION['msg'] = "Offer delete Successfully";
+        $_SESSION['msg'] = "Offer deleted successfully";
 
         $goto = '../view_offers.php';
         $where_condition  = array('sid'=>$_GET['id']); 
