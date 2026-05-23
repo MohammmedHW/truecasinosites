@@ -1,6 +1,8 @@
 <div class="col-md-6 auth-panel auth-hero">
   <span class="auth-kicker">Casino Admin</span>
-  <h1>Control your casino offers with a simpler admin experience.</h1>
+ <h1 style="color: #ffffff;">
+  Control your casino offers with a simpler admin experience.
+</h1>
   <p>Review offers faster, manage categories with less friction, and keep the content team focused on updates instead of fighting the panel.</p>
   <ul class="auth-feature-list">
     <li class="auth-feature">Cleaner login flow for staff access.</li>
@@ -10,7 +12,7 @@
 </div>
 
 <div class="col-md-6 auth-panel auth-form-wrap">
-  <img src="Images/logo.png" data-src="Images/logo.png" data-src-retina="Images/logo.png" class="img-responsive auth-logo" alt="Admin logo">
+ 
   <h2>Sign in</h2>
   <p class="auth-copy">Use your staff email and password to open the admin dashboard.</p>
 
